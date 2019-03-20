@@ -16,6 +16,8 @@ class ArticleSerializer < ActiveModel::Serializer
         # we may in the future need or want a UserSerializer where we list
         # the users with their roles for each article
       }
+        # TODO: eventually, this should only pull the most recent ~20 articles
+        # or only the articles that have a particular user attached
     end
   end
 end
