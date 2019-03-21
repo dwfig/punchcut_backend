@@ -3,7 +3,7 @@ class ArticleSerializer < ActiveModel::Serializer
   #user:    name, email
   #role:    user, article, user_role
   has_many :users
-  attributes :id, :text, :headline, :post_date, :users #, :roles
+  attributes :id, :text, :headline, :post_date, :posted, :users #, :roles
 
   def users
     self.object.users.map do |user|

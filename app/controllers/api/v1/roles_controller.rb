@@ -18,7 +18,7 @@ class Api::V1::RolesController < ApplicationController
     @role = Role.new(role_params)
 
     if @role.save
-      render json: @role, status: :created, location: @role
+      render json: @role, status: :created
     else
       render json: @role.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class Api::V1::RolesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def role_params
-      params.require(:role).permit(:user_id, :article_id, :type)
+      params.require(:role).permit(:user_id, :article_id, :type, :user_role)
     end
 end
