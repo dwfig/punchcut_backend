@@ -16,6 +16,11 @@ gem 'puma', '~> 3.11'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#json web token authentication
+gem 'jwt'
+
+gem 'dotenv-rails'
+
 # Serializer for efficient data responses
 gem 'active_model_serializers'
 
