@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_151925) do
+ActiveRecord::Schema.define(version: 2019_03_27_143215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_151925) do
     t.string "dek"
     t.string "img_src"
     t.boolean "posted", default: false
+    t.string "importance"
   end
 
   create_table "roles", force: :cascade do |t|
