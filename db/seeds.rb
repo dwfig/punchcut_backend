@@ -8,6 +8,14 @@
 
 require 'date'
 
+Role.delete_all
+puts "roles deleted"
+Article.delete_all
+puts "articles deleted"
+User.delete_all
+puts "users deleted"
+
+
 # users: name, email
 puts "creating users..."
 austen = User.create(name: "Jane Austen", email: "jane@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
@@ -15,8 +23,8 @@ bronte = User.create(name: "Emily Bronte", email: "emily@gmail.com", password_di
 cervantes = User.create(name: "Miguel de Cervantes", email: "mikec@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
 darwin = User.create(name: "Charles Darwin", email: "charles@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
 dickens = User.create(name: "Charles Dickens", email: "cdickens@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
-eliot = User.create(name: "George Eliot", email: "mevans@gmail.com", password_digest: "#{BCrypt::Password.create('mill')}")
-gibran = User.create(name: "Khalil Gibran", email: "kgibran@gmail.com", password_digest: "#{BCrypt::Password.create('mahjar')}")
+eliot = User.create(name: "George Eliot", email: "mevans@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
+gibran = User.create(name: "Khalil Gibran", email: "kgibran@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
 gilman = User.create(name: "Charlotte Perkins Gilman", email: "charlotte@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
 homer = User.create(name: "Homer", email: "homer@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
 hugo = User.create(name: "Victor Hugo", email: "victor@gmail.com", password_digest: "#{BCrypt::Password.create('pass')}")
